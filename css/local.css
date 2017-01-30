@@ -1,0 +1,164 @@
+span#title {
+	display: inline-block;
+}
+
+/* Fit inline images within margins */
+a.popupimg img {
+    width:100%;
+    height:auto;
+}
+
+/* Give figures nice captions: */
+figcaption {
+    color: white;
+    background: black;
+    padding: 0.2em 0.5em;
+    font-size:90%;
+    text-align:center;
+}
+/* And a bit of margin top and bottom */
+figure { margin:0.5em 0 1.5em; }
+
+/* Give some of the smaller headings room to breathe */
+h4, h5, h6 {
+    margin:1.5em 0 0.5em;
+}
+
+/* Don't add extra space for immediate subheads
+   The <div> in between is something tocify.js does, I think.
+   Some of the smaller headings may be skipped, based on the value of
+   the 'selectors' option passed to tocify().
+*/
+h1 + div + h2,
+h2 + div + h3,
+h3 + div + h4,
+h4 + div + h5,
+h5 + div + h6 {
+    margin-top:0 !important;
+}
+
+li.tocify-item {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Account for breakpoint at 991px */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+	div#preview {
+		margin-left:250px;
+	}
+	/* From bootstrap.css */
+	div.container {
+		margin-left:0;
+		margin-right:0;
+	}
+    /* Right-align the menu items when the navbar is in the small
+       screen view */
+    .nav > li {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav > li {
+        text-align: right;
+    }
+}
+
+/* Improve contrast of top nav when in not-"collapsed" state */
+.navbar.navbar-fixed-top {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    /*font-weight: 800;*/
+}
+
+.navbar.navbar-fixed-top.top-nav-collapse {
+    text-shadow: none;
+}
+
+
+
+/* ---- Tables ---- */
+/* Source: https://gist.github.com/ryangray/1882525 */
+ 
+/* A clean textbook-like style with horizontal lines above and below and under
+   the header. Rows highlight on hover to help scanning the table on screen.
+*/
+ 
+table {
+    margin: 1em 0 1.5em;
+	border-collapse: collapse;
+	border-spacing: 0; /* IE 6 */
+	 
+	border-bottom: 2pt solid #000;
+	border-top: 2pt solid #000; /* The caption on top will not have a bottom-border */
+	 
+	/* Center */
+	/*margin-left: auto;
+	margin-right: auto;*/
+	}
+thead /* Entire table header */
+	{
+	border-bottom: 1pt solid #000;
+	background-color: #eee; /* Does this BG print well? */
+	}
+ 
+tr.header /* Each header row */
+	{
+	}
+	 
+tbody /* Entire table body */
+	{
+	}
+ 
+/* Table body rows */
+ 
+tr {}
+tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
+	{
+	background-color: #eee;
+	}
+/* Odd and even rows */
+tr.even {}
+tr.odd { background-color: #bebebe; }
+ 
+td, th /* Table cells and table header cells */
+	{
+	vertical-align: top; /* Word */
+	vertical-align: baseline; /* Others */
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	}
+/* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
+/*
+tr td:last-child, tr th:last-child
+	{
+	padding-right: 0;
+	}
+tr td:first-child, tr th:first-child
+	{
+	padding-left: 0;
+	}
+*/
+ 
+th /* Table header cells */
+	{
+	font-weight: bold;
+	}
+ 
+tfoot /* Table footer (what appears here if caption is on top?) */
+	{
+	}
+ 
+caption /* This is for a table caption tag, not the p.caption Pandoc uses in a div.figure */
+	{
+	caption-side: top;
+	border: none;
+	font-size: 0.9em;
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 0.3em; /* Good for when on top */
+	padding-bottom: 0.2em;
+	}

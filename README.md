@@ -17,9 +17,9 @@ of users.
 
 Here are some model user guides that you may consider emulating:
 
-* Wikipedia – (Getting Started)[http://en.wikipedia.org/wiki/Help:Contents/Getting_started]
-* Mozilla (Firefox User Guide)[http://www.mozilla.org/en-US/firefox/central/]
-* Git – (Getting Started Guide)[http://git-scm.com/book/en/Getting-Started]
+* Wikipedia – [Getting Started](http://en.wikipedia.org/wiki/Help:Contents/Getting_started)
+* Mozilla [Firefox User Guide](http://www.mozilla.org/en-US/firefox/central/)
+* Git – [Getting Started Guide](http://git-scm.com/book/en/Getting-Started)
 
 ## Credits
 The [HTML version][3] of the Bioreactor user manual makes use of Junil Um's
